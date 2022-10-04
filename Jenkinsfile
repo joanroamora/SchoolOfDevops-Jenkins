@@ -32,6 +32,7 @@ pipeline {
                 steps {
                     echo 'Deploying'
                     sh 'ls -a && cd artifacts && ls -a'
+                    sh 'cd SoD-jp-02 && ls -a'
 
                 }
             }
