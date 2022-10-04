@@ -5,7 +5,6 @@ pipeline {
                 steps {
                     echo 'Preparing...'
                     sh 'bash script.sh'
-                    sh 'npm install'
                 }
             }
             
