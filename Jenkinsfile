@@ -1,9 +1,13 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'current-alpine3.15'
+        }
+    }
         stages {
             stage('Prepare') {
                 steps {
-                    echo 'Preparing packages...'
+                    echo 'Preparing...'
                     sh 'npm install'
                 }
             }
