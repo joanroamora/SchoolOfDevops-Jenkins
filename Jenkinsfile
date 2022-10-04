@@ -6,8 +6,7 @@ pipeline {
             stage('Prepare') {
                 steps {
                     echo 'Preparing...'
-                    sh 'echo "HELLOWORLD"'
-                    sh 'bash script.sh'
+                    git branch: 'main', url: 'https://github.com/joanroamora/SchoolOfDevops-Jenkins.git'
                 }
             }
             
