@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'current-alpine3.15'
-        }
-    }
+    agent any
         stages {
             stage('Prepare') {
                 steps {
