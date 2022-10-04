@@ -29,25 +29,15 @@ pipeline {
             }
             
             stage('Deploy') {
-                steps {
-                    echo 'Deploying'
-                    sh 'ls -a && cd artifacts && ls -a'
-                    sh 'file SoD-jp-02'
-
-                }
+                when {
+              expression {
+                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+              }
             }
-            
-            // stage('Deploy') {
-            //     steps {
-            //         echo 'Deploy'
-            //         sh 'docker pull jeisonroa1/image:1 ; docker run --name contenedor -d -p 8001:8001 jeisonroa1/image:1 npm start'
-            //        input "Presione una tecla para detener el servidor."
-            //        sh 'docker stop contenedor; docker rm -f contenedor ; docker rmi -f jeisonroa1/image:1'
-
-            //     }
-            // }
-            
-            
-                  
+                steps {
+                    sh 'echo ""Build succesfully, deploy succesfully.'
+                }
+            } 
+         
         }
 } 
