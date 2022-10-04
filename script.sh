@@ -4,4 +4,4 @@
 #apt install -y npm
 #nodejs --version
 #npm --version
-echo "HOLA MUNDO"
+echo "HOLA MUNDO INSIDE THE SCRIPT"
