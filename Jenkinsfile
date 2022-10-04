@@ -6,9 +6,12 @@ pipeline {
             stage('Prepare') {
                 steps {
                     echo 'Preparing...'
-                    sh 'sudo apk add bash'
+                    sh 'apk update'
+                    sh 'apk upgrade'
+                    sh 'apk add bash'
+                    //sh 'sudo apk add bash'
                     sh 'echo "HELLOWORLD"'
-                    sh 'bash script.sh'
+                    //sh 'bash script.sh'
                 }
             }
             
