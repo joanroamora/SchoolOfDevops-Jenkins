@@ -7,9 +7,9 @@ pipeline {
             stage('Prepare') {
                 steps {
                     echo 'Preparing...'
-                    sh 'apk update'
-                    sh 'apk upgrade'
-                    sh 'apk add bash'
+                    sh 'apk update -u root'
+                    //sh 'apk upgrade'
+                    //sh 'apk add bash'
                     //sh 'sudo apk add bash'
                     sh 'echo "HELLOWORLD"'
                     //sh 'bash script.sh'
