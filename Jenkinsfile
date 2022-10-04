@@ -16,17 +16,16 @@ pipeline {
             stage('Test') {
                 steps {
                     echo 'Testing..'
-                    sh 'pwd'
                 }
             }
             
-            // stage('Test') {
-            //     steps {
-            //         echo 'Testing..'
-            //         sh 'docker run --name contenedor -d jeisonroa1/image:1 npm test'
-
-            //     }
-            // }
+            stage('Packaging') {
+                steps {
+                    echo 'Packaging..'
+                    sh 'mkdir artifacts'
+                    sh 'cp /var/lib/jenkins/workspace/SoD-jp-02 /var/lib/jenkins/workspace/SoD-jp-02/artifacts'
+                }
+            }
             
             // stage('Push') {
             //     steps {
