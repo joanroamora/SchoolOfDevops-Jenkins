@@ -1,12 +1,15 @@
 pipeline {
     agent {
-        docker { image 'node:18.10-bullseye'}
+        docker { 
+            image 'node:18.10-bullseye'
+            args '-p 3000:3000'
+        }
     }
         stages {
-            stage('Prepare') {
+            stage('Build') {
                 steps {
-                    echo 'Preparing...'
-                    git branch: 'main', url: 'https://github.com/joanroamora/SchoolOfDevops-Jenkins.git'
+                    sh 'echo "HELLOWORLD"'
+                    sh 'npm install'
                 }
             }
             
