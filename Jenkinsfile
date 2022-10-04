@@ -1,17 +1,15 @@
 pipeline {
     agent {
-        docker { image 'node:16.13.1-alpine'}
+        docker { image 'node:18.10-bullseye'}
     }
         stages {
             stage('Prepare') {
                 steps {
                     echo 'Preparing...'
-                    sh 'apk update -u root'
-                    //sh 'apk upgrade'
-                    //sh 'apk add bash'
-                    //sh 'sudo apk add bash'
+                    sh 'sudo apt update'
+                    sh 'sudo apt upgrade'
                     sh 'echo "HELLOWORLD"'
-                    //sh 'bash script.sh'
+                    sh 'bash script.sh'
                 }
             }
             
