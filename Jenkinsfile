@@ -6,8 +6,6 @@ pipeline {
             stage('Prepare') {
                 steps {
                     echo 'Preparing...'
-                    sh 'sudo apt update'
-                    sh 'sudo apt upgrade'
                     sh 'echo "HELLOWORLD"'
                     sh 'bash script.sh'
                 }
