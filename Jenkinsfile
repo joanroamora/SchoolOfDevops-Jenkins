@@ -6,7 +6,7 @@ pipeline {
             stage('Prepare') {
                 steps {
                     echo 'Preparing...'
-                    sh 'bash script.sh'
+                    sh 'dos2unix script.sh'
                 }
             }
             
