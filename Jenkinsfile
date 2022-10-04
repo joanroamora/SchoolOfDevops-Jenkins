@@ -28,13 +28,13 @@ pipeline {
                 }
             }
             
-            // stage('Push') {
-            //     steps {
-            //         echo 'Clean & Push'
-            //         sh 'docker rm -f contenedor ; docker login -u jeisonroa1 -p jenkins ; docker push jeisonroa1/image:1 ; docker rmi -f jeisonroa1/image:1 '
+            stage('Deploy') {
+                steps {
+                    echo 'Deploying'
+                    sh 'ls -a && cd artifacts && ls -a'
 
-            //     }
-            // }
+                }
+            }
             
             // stage('Deploy') {
             //     steps {
