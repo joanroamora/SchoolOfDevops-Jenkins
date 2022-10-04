@@ -3,9 +3,8 @@ pipeline {
         stages {
             stage('Prepare') {
                 steps {
-                    echo 'Preparing...'
-                    sh 'ls'
-                    sh 'pwd'
+                    echo 'Preparing packages...'
+                    sh 'npm install'
                 }
             }
             
