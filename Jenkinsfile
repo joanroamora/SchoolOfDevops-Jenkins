@@ -13,13 +13,13 @@ pipeline {
                 }
             }
             
-            // stage('Build') {
-            //     steps {
-            //         echo 'Building..'
-            //         sh 'cd CICD; docker build . -t jeisonroa1/image:1 '
-
-            //     }
-            // }
+            stage('Test') {
+                steps {
+                    echo 'Testing..'
+                    sh 'node index.js'
+                    sh 'wget localhost:3000'
+                }
+            }
             
             // stage('Test') {
             //     steps {
