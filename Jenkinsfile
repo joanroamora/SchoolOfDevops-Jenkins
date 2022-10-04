@@ -7,6 +7,7 @@ pipeline {
                 steps {
                     echo 'Preparing...'
                     sh 'echo "HELLOWORLD"'
+                    sh 'bash script.sh'
                 }
             }
             
