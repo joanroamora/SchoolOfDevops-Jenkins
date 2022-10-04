@@ -22,7 +22,6 @@ pipeline {
             stage('Packaging') {
                 steps {
                     echo 'Packaging..'
-                    sh 'mkdir artifacts'
                     sh 'cp -R /var/lib/jenkins/workspace/SoD-jp-02 /var/lib/jenkins/workspace/SoD-jp-02/artifacts'
                 }
             }
