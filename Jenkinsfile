@@ -16,7 +16,7 @@ pipeline {
             stage('Test') {
                 steps {
                     echo 'Testing..'
-                    sh 'node index.js && wget localhost:3000'
+                    sh 'wget localhost:3000'
                 }
             }
             
