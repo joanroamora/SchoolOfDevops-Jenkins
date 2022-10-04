@@ -6,7 +6,7 @@ pipeline {
             stage('Prepare') {
                 steps {
                     echo 'Preparing...'
-                    sh 'dos2unix script.sh'
+                    sh 'echo "HELLOWORLD"'
                 }
             }
             
