@@ -6,6 +6,7 @@ pipeline {
             stage('Prepare') {
                 steps {
                     echo 'Preparing...'
+                    sh 'apk add bash'
                     sh 'echo "HELLOWORLD"'
                     sh 'bash script.sh'
                 }
